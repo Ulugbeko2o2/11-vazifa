@@ -22,7 +22,6 @@ let token = localStorage.getItem("access")
 apiClient.interceptors.request.use(
     (config)=>{
         config.headers.set('Authorization' , `Bearer ${token}`)
-        console.log(config);
         return config
     },
     (err)=>{
